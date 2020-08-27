@@ -1,7 +1,7 @@
 #import socket module
 from socket import *
 serverSocket = socket(AF_INET, SOCK_STREAM)
-#Prepare a sever socket
+serverSocket.bind(('10.126.190.205', serverPort)) #Prepare a sever socket #This is MQU IP idk why i'm here
 #Fill in start
 #Fill in end
 while True:
@@ -9,7 +9,7 @@ while True:
     print('Ready to serve...')
     connectionSocket, addr =   #Fill in start              #Fill in end          
     try:
-        message =   #Fill in start          #Fill in end               
+        message = "generic message"  #Fill in start          #Fill in end               
         filename = message.split()[1]                 
         f = open(filename[1:])                        
         outputdata = #Fill in start       #Fill in end                   
