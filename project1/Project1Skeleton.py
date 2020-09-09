@@ -24,10 +24,11 @@ def get_ip():
 
 serverPort   = 6789 #If possible, get this dynamically as well
 ipAddress    = get_ip()
+print("Ip addres of the server: ", ipAddress)
 
 try:
     serverSocket = socket(AF_INET, SOCK_STREAM)
-    serverSocket.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1) #For testing, delete this line during deployment
+    #serverSocket.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1) #For testing, delete this line during deployment
     serverSocket.bind((ipAddress, serverPort)) #Prepare a sever socket #This is MQU IP idk why i'm here
     serverSocket.listen(5)
 except Exception as err:
